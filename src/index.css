@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Font Awesome icons support */
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.fa-film::before { content: "🎬"; }
+.fa-baby::before { content: "👶"; }
+.fa-tv::before { content: "📺"; }
+.fa-child::before { content: "🧒"; }
+.fa-users::before { content: "👥"; }
+.fa-star::before { content: "⭐"; }
+.fa-laugh::before { content: "😂"; }
+.fa-compass::before { content: "🧭"; }
+.fa-home::before { content: "🏠"; }
+.fa-magic::before { content: "✨"; }
+.fa-dragon::before { content: "🐉"; }
+.fa-futbol::before { content: "⚽"; }
+.fa-basketball-ball::before { content: "🏀"; }
+.fa-trophy::before { content: "🏆"; }
+.fa-music::before { content: "🎵"; }
+.fa-utensils::before { content: "🍽️"; }
+.fa-globe::before { content: "🌍"; }
+.fa-search::before { content: "🔍"; }
+.fa-play::before { content: "▶️"; }
+.fa-theater-masks::before { content: "🎭"; }
+.fa-car::before { content: "🚗"; }

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SirNet - Netflix-style Streaming Platform</title>
+    <meta name="description" content="SirNet - Plataforma de streaming con películas, series, contenido infantil y TV en vivo">
+    <script type="module" crossorigin src="/assets/index-C2n6dIYx.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-ZjExC-zA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+
+<script>
+  (function() {
+      let abierto = false;
+  
+      function detectarDevTools() {
+          const inicio = performance.now();
+          debugger; // esto fuerza una pausa si la consola está abierta
+          const tiempo = performance.now() - inicio;
+          
+          if (tiempo > 100) { // si tarda demasiado, probablemente se pausó
+              if (!abierto) {
+                  abierto = true;
+                  window.close(); // intenta cerrar la pestaña
+                  window.location.href = "about:blank"; // fallback por si no se puede cerrar
+              }
+          }
+      }
+  
+      setInterval(detectarDevTools, 500);
+  })();
+  </script>
+  
